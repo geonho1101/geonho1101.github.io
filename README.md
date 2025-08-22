@@ -24,7 +24,7 @@ My goal is to release quickly, update consistently, and create games that last.
 - Platform: Android (iOS planned)  
 - Engine: Unity 6  
 - Preferred Genres: Casual, Puzzle, Idle  
-- Dev Style: Reusing assets and leveraging AI to develop quickly and efficiently.
+- Dev Style: Turning ideas into reality, we continue to make games that bring joy to players.
 
 ### 📫 Contact
 - Email: [lewlew123rnrmf@gmail.com](mailto:lewlew123rnrmf@gmail.com)  
@@ -52,7 +52,7 @@ My goal is to release quickly, update consistently, and create games that last.
 - 플랫폼: Android (iOS 예정)  
 - 엔진: Unity 6  
 - 선호 장르: 캐주얼, 퍼즐, 방치형  
-- 특징: 에셋 재활용과 AI 활용을 통해 빠르고 효율적인 개발을 지향합니다.
+- 특징: 아이디어를 실현해, 플레이어에게 즐거움을 주는 게임을 계속 제작합니다.
 
 ### 📫 연락처
 - 이메일: [lewlew123rnrmf@gmail.com](mailto:lewlew123rnrmf@gmail.com)  
