@@ -41,10 +41,10 @@ My goal is to release quickly, update consistently, and create games that last.
 **Seal the Rift!**  
 - 장르: 캐주얼 · 하이스코어  
 - 설명: 화면을 터치해 균열을 봉인하며 점수를 올리는 한 손 플레이 게임.  
-- 플랫폼: Android (Google Play 출시 준비 중)
+- 플랫폼: Android
 
-**드래곤 먹이주기 (개발 중)**  
-- 장르: 아케이드 · 회피  
+**나는 드래곤 밥 줘! **  
+- 장르: 캐주얼 · 하이스코어   
 - 설명: 음식을 먹이고 폭탄은 피해라! 단계별로 속도가 빨라지는 클래식 아케이드.  
 - 상태: 개발 진행 중
 
