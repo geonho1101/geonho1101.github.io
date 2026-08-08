@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Seal the Rift</title>
+    <title>균열을 막아라 : 우주전쟁</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   <style id="seal-the-rift-webgl-polish">
@@ -191,7 +191,7 @@
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Seal the Rift</div>
+        <div id="unity-build-title">균열을 막아라 : 우주전쟁</div>
       </div>
     </div>
     <script>
@@ -231,7 +231,7 @@
         codeUrl: buildUrl + "/WebGLSubmission.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "k-magpie",
-        productName: "Seal the Rift",
+        productName: "균열을 막아라 : 우주전쟁",
         productVersion: "1.0.5",
         showBanner: unityShowBanner,
         // errorHandler: function(err, url, line) {
@@ -319,7 +319,7 @@
         if (canvas) {
           canvas.tabIndex = 0;
           canvas.setAttribute("role", "application");
-          canvas.setAttribute("aria-label", "Seal the Rift 게임 화면 / game canvas");
+          canvas.setAttribute("aria-label", "균열을 막아라 : 우주전쟁 게임 화면 / Seal the Rift: Space War game canvas");
           canvas.addEventListener("pointerdown", function () {
             canvas.focus({ preventScroll: true });
           }, { passive: true });
@@ -398,7 +398,9 @@
         panel.id = "seal-the-rift-orientation-panel";
         var kicker = document.createElement("p");
         kicker.id = "seal-the-rift-orientation-kicker";
-        kicker.textContent = "SEAL THE RIFT · MOBILE WEBGL";
+        kicker.textContent = isKorean
+          ? "균열을 막아라 : 우주전쟁 · MOBILE WEBGL"
+          : "SEAL THE RIFT: SPACE WAR · MOBILE WEBGL";
         var device = document.createElement("div");
         device.id = "seal-the-rift-orientation-device";
         device.setAttribute("aria-hidden", "true");
@@ -495,8 +497,8 @@
           } else {
             title.textContent = isKorean ? "가로 화면으로 돌려주세요" : "Rotate to landscape";
             copy.textContent = isKorean
-              ? "SEAL THE RIFT는 가로 화면 전용입니다. 버튼을 누르거나 기기를 가로로 돌리면 계속됩니다."
-              : "SEAL THE RIFT is designed for landscape play. Use the button or rotate your device to continue.";
+              ? "균열을 막아라 : 우주전쟁은 가로 화면 전용입니다. 버튼을 누르거나 기기를 가로로 돌리면 계속됩니다."
+              : "SEAL THE RIFT: SPACE WAR is designed for landscape play. Use the button or rotate your device to continue.";
             action.textContent = isKorean ? "가로 전체 화면으로 전환" : "Enter landscape fullscreen";
           }
 
