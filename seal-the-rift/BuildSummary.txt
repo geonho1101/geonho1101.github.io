@@ -1,5 +1,5 @@
 Seal the Rift - WebGL Submission Build
-Built UTC: 2026-08-08T14:01:23.5390594Z
+Built UTC: 2026-08-08T19:35:39.8609439Z
 Unity: 6000.3.12f1
 Product: Seal the Rift
 Version: 1.0.5
@@ -10,11 +10,12 @@ Decompression Fallback: true
 Data Caching: true
 Audio: WebGL CompressedInMemory / AAC / quality <= 0.75
 Search indexing: disabled (noindex, nofollow, noarchive)
+Mobile orientation: landscape fullscreen request with manual-rotate fallback
 Build result: Succeeded
-Build duration: 00:31:36.7765009
-Build report bytes: 75277860
+Build duration: 00:25:30.8581479
+Build report bytes: 75272830
 Player output files: 26
-Player output bytes: 75282662
+Player output bytes: 75292507
 Warnings: 0
 Errors: 0
 Resources: 144 files / 54.93 MiB; development-looking files: 0 / 0.00 MiB.

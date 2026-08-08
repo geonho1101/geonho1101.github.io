@@ -9,8 +9,7 @@
     <title>Unity Web Player | Seal the Rift</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-
-    <style id="seal-the-rift-webgl-polish">
+  <style id="seal-the-rift-webgl-polish">
       html, body {
         width: 100%;
         height: 100%;
@@ -50,6 +49,133 @@
       }
       #unity-fullscreen-button[role="button"] { border: 0; padding: 0; }
       #unity-fullscreen-button:focus-visible { outline: 3px solid #58e9ff; outline-offset: 2px; }
+    </style>
+  <style id="seal-the-rift-orientation-style">
+      html.seal-orientation-blocked #unity-container { pointer-events: none !important; }
+      #seal-the-rift-orientation-gate[hidden] { display: none !important; }
+      #seal-the-rift-orientation-gate {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        box-sizing: border-box;
+        padding:
+          max(24px, env(safe-area-inset-top))
+          max(20px, env(safe-area-inset-right))
+          max(24px, env(safe-area-inset-bottom))
+          max(20px, env(safe-area-inset-left));
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
+        background:
+          radial-gradient(circle at 50% 38%, rgba(46, 203, 255, 0.18), transparent 42%),
+          radial-gradient(circle at 22% 82%, rgba(116, 74, 225, 0.16), transparent 38%),
+          rgba(2, 8, 20, 0.985);
+        color: #ecfbff;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      #seal-the-rift-orientation-panel {
+        width: min(460px, calc(100vw - 40px));
+        padding: clamp(24px, 6vw, 38px);
+        box-sizing: border-box;
+        border: 1px solid rgba(88, 233, 255, 0.62);
+        border-radius: 22px;
+        background: linear-gradient(150deg, rgba(12, 38, 67, 0.98), rgba(4, 13, 31, 0.98));
+        box-shadow: 0 0 48px rgba(41, 205, 255, 0.22), inset 0 0 30px rgba(80, 219, 255, 0.08);
+      }
+      #seal-the-rift-orientation-kicker {
+        margin: 0 0 18px;
+        color: #78eaff;
+        font: 700 12px/1.3 Arial, sans-serif;
+        letter-spacing: 0.16em;
+      }
+      #seal-the-rift-orientation-device {
+        position: relative;
+        width: 68px;
+        height: 102px;
+        margin: 0 auto 22px;
+        border: 4px solid #58e9ff;
+        border-radius: 15px;
+        box-sizing: border-box;
+        box-shadow: 0 0 24px rgba(88, 233, 255, 0.35);
+        animation: seal-the-rift-rotate-device 1.8s ease-in-out infinite;
+      }
+      #seal-the-rift-orientation-device::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+        width: 14px;
+        height: 3px;
+        border-radius: 3px;
+        background: #58e9ff;
+        transform: translateX(-50%);
+      }
+      #seal-the-rift-orientation-device::after {
+        content: "↻";
+        position: absolute;
+        left: calc(100% + 13px);
+        top: 50%;
+        color: #ffd76a;
+        font: 700 36px/1 Arial, sans-serif;
+        transform: translateY(-50%);
+        text-shadow: 0 0 14px rgba(255, 215, 106, 0.52);
+      }
+      #seal-the-rift-orientation-title {
+        margin: 0 0 10px;
+        font-size: clamp(23px, 6vw, 31px);
+        line-height: 1.25;
+      }
+      #seal-the-rift-orientation-copy {
+        margin: 0 auto 24px;
+        max-width: 390px;
+        color: #b9dce8;
+        font-size: clamp(15px, 3.8vw, 18px);
+        line-height: 1.55;
+      }
+      #seal-the-rift-orientation-action {
+        width: min(320px, 100%);
+        min-height: 58px;
+        padding: 14px 22px;
+        border: 1px solid #8af2ff;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #1d9fc4, #7556d8);
+        color: #fff;
+        font: 700 clamp(16px, 4vw, 19px)/1.2 Arial, sans-serif;
+        letter-spacing: 0.01em;
+        box-shadow: 0 8px 28px rgba(46, 178, 234, 0.28);
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+      #seal-the-rift-orientation-action:focus-visible {
+        outline: 3px solid #ffd76a;
+        outline-offset: 4px;
+      }
+      #seal-the-rift-orientation-action[aria-disabled="true"] { opacity: 0.68; cursor: wait; }
+      @keyframes seal-the-rift-rotate-device {
+        0%, 28% { transform: rotate(0deg); }
+        62%, 100% { transform: rotate(90deg); }
+      }
+      @media (max-height: 520px) and (orientation: portrait) {
+        #seal-the-rift-orientation-gate { align-items: flex-start; }
+        #seal-the-rift-orientation-panel { padding: 18px 22px; }
+        #seal-the-rift-orientation-kicker { margin-bottom: 10px; }
+        #seal-the-rift-orientation-device { width: 52px; height: 76px; margin-bottom: 12px; border-width: 3px; }
+        #seal-the-rift-orientation-device::after { display: none; }
+        #seal-the-rift-orientation-title { margin-bottom: 6px; }
+        #seal-the-rift-orientation-copy { margin-bottom: 14px; line-height: 1.4; }
+        #seal-the-rift-orientation-action { min-height: 50px; padding: 10px 18px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #seal-the-rift-orientation-device { animation: none; transform: rotate(90deg); }
+      }
     </style>
   </head>
   <body>
@@ -161,6 +287,10 @@
         createUnityInstance(canvas, config, (progress) => {
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
+                window.sealTheRiftUnityInstance = unityInstance;
+                if (typeof window.sealTheRiftSyncOrientationPause === "function") {
+                  window.sealTheRiftSyncOrientationPause();
+                }
                 document.querySelector("#unity-loading-bar").style.display = "none";
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
@@ -174,8 +304,7 @@
       document.body.appendChild(script);
 
     </script>
-
-    <script id="seal-the-rift-webgl-accessibility">
+  <script id="seal-the-rift-webgl-accessibility">
       (function () {
         "use strict";
         var isKorean = /^ko(?:-|$)/i.test(navigator.language || "");
@@ -238,6 +367,218 @@
             fullscreen.click();
           });
         }
+      }());
+    </script>
+  <script id="seal-the-rift-orientation-runtime">
+      (function () {
+        "use strict";
+
+        var userAgent = navigator.userAgent || navigator.vendor || "";
+        var userAgentDataMobile = navigator.userAgentData && navigator.userAgentData.mobile === true;
+        var mobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+        var desktopModeIPad = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+        var isMobileBrowser = userAgentDataMobile || mobileUserAgent || desktopModeIPad;
+        if (!isMobileBrowser) return;
+
+        var isKorean = /^ko(?:-|$)/i.test(navigator.language || "");
+        var root = document.documentElement;
+        var container = document.querySelector("#unity-container");
+        var canvas = document.querySelector("#unity-canvas");
+        var canvasTabIndex = canvas ? canvas.tabIndex : 0;
+        var gate = document.createElement("div");
+        gate.id = "seal-the-rift-orientation-gate";
+        gate.hidden = true;
+        gate.tabIndex = -1;
+        gate.setAttribute("role", "dialog");
+        gate.setAttribute("aria-modal", "true");
+        gate.setAttribute("aria-labelledby", "seal-the-rift-orientation-title");
+        gate.setAttribute("aria-describedby", "seal-the-rift-orientation-copy");
+
+        var panel = document.createElement("div");
+        panel.id = "seal-the-rift-orientation-panel";
+        var kicker = document.createElement("p");
+        kicker.id = "seal-the-rift-orientation-kicker";
+        kicker.textContent = "SEAL THE RIFT · MOBILE WEBGL";
+        var device = document.createElement("div");
+        device.id = "seal-the-rift-orientation-device";
+        device.setAttribute("aria-hidden", "true");
+        var title = document.createElement("h1");
+        title.id = "seal-the-rift-orientation-title";
+        var copy = document.createElement("p");
+        copy.id = "seal-the-rift-orientation-copy";
+        copy.setAttribute("aria-live", "polite");
+        var action = document.createElement("button");
+        action.id = "seal-the-rift-orientation-action";
+        action.type = "button";
+        panel.appendChild(kicker);
+        panel.appendChild(device);
+        panel.appendChild(title);
+        panel.appendChild(copy);
+        panel.appendChild(action);
+        gate.appendChild(panel);
+        document.body.appendChild(gate);
+
+        var wasVisible = false;
+        var attemptPending = false;
+        var attemptFailed = false;
+        var orientationBlocked = false;
+        var unityOrientationStateSent = null;
+        var refreshTimerShort = 0;
+        var refreshTimerLong = 0;
+
+        function isPortraitViewport() {
+          return window.innerHeight > window.innerWidth;
+        }
+
+        function syncUnityOrientationPause() {
+          var unityInstance = window.sealTheRiftUnityInstance;
+          if (!unityInstance || typeof unityInstance.SendMessage !== "function") return;
+          if (unityOrientationStateSent === orientationBlocked) return;
+          try {
+            unityInstance.SendMessage(
+              "RelaunchWebGLOrientationBridge",
+              "SetOrientationBlocked",
+              orientationBlocked ? "1" : "0");
+            unityOrientationStateSent = orientationBlocked;
+          } catch (error) {
+            // The runtime may still be creating the bootstrap object. A later
+            // orientation/viewport event or instance registration retries.
+          }
+        }
+        window.sealTheRiftSyncOrientationPause = syncUnityOrientationPause;
+
+        function setGameBlocked(blocked) {
+          orientationBlocked = blocked;
+          syncUnityOrientationPause();
+          root.classList.toggle("seal-orientation-blocked", blocked);
+          if (!container) return;
+          if (blocked) {
+            container.setAttribute("aria-hidden", "true");
+          } else {
+            container.removeAttribute("aria-hidden");
+          }
+          if ("inert" in container) container.inert = blocked;
+          if (canvas) canvas.tabIndex = blocked ? -1 : canvasTabIndex;
+        }
+
+        function restoreLandscapeViewport(restoreFocus) {
+          window.requestAnimationFrame(function () {
+            window.requestAnimationFrame(function () {
+              window.dispatchEvent(new Event("resize"));
+              if (restoreFocus && canvas) canvas.focus({ preventScroll: true });
+            });
+          });
+        }
+
+        function refreshOrientationGate() {
+          var shouldShow = isPortraitViewport();
+          if (!shouldShow) {
+            var restoreFocus = gate.contains(document.activeElement);
+            gate.hidden = true;
+            gate.setAttribute("aria-hidden", "true");
+            setGameBlocked(false);
+            if (wasVisible) restoreLandscapeViewport(restoreFocus);
+            wasVisible = false;
+            return;
+          }
+
+          if (attemptPending) {
+            title.textContent = isKorean ? "가로 화면 전환 중" : "Switching to landscape";
+            copy.textContent = isKorean ? "전체 화면과 가로 방향을 요청하고 있습니다." : "Requesting fullscreen landscape mode.";
+            action.textContent = isKorean ? "잠시만 기다려주세요" : "Please wait";
+          } else if (attemptFailed) {
+            title.textContent = isKorean ? "기기를 가로로 돌려주세요" : "Rotate to landscape";
+            copy.textContent = isKorean
+              ? "자동 전환을 완료하지 못했습니다. 화면 회전 잠금이 켜져 있다면 해제한 뒤 기기를 가로로 돌려주세요."
+              : "We couldn't switch automatically. If orientation lock is on, turn it off and rotate your device.";
+            action.textContent = isKorean ? "가로 전체 화면 다시 시도" : "Retry landscape fullscreen";
+          } else {
+            title.textContent = isKorean ? "가로 화면으로 돌려주세요" : "Rotate to landscape";
+            copy.textContent = isKorean
+              ? "SEAL THE RIFT는 가로 화면 전용입니다. 버튼을 누르거나 기기를 가로로 돌리면 계속됩니다."
+              : "SEAL THE RIFT is designed for landscape play. Use the button or rotate your device to continue.";
+            action.textContent = isKorean ? "가로 전체 화면으로 전환" : "Enter landscape fullscreen";
+          }
+
+          action.setAttribute("aria-disabled", attemptPending ? "true" : "false");
+          gate.hidden = false;
+          gate.setAttribute("aria-hidden", "false");
+          setGameBlocked(true);
+          if (canvas) canvas.blur();
+          if (!wasVisible) {
+            window.requestAnimationFrame(function () { action.focus({ preventScroll: true }); });
+          }
+          wasVisible = true;
+        }
+
+        function currentFullscreenElement() {
+          return document.fullscreenElement || document.webkitFullscreenElement || null;
+        }
+
+        function requestLandscapeMode() {
+          var requestFullscreen = root.requestFullscreen || root.webkitRequestFullscreen;
+          var fullscreenStep = Promise.resolve();
+          if (!currentFullscreenElement() && typeof requestFullscreen === "function") {
+            try {
+              fullscreenStep = Promise.resolve(requestFullscreen.call(root));
+            } catch (error) {
+              fullscreenStep = Promise.reject(error);
+            }
+          }
+
+          return fullscreenStep.catch(function () { return null; }).then(function () {
+            var orientation = window.screen && window.screen.orientation;
+            if (!orientation || typeof orientation.lock !== "function") return false;
+            try {
+              return Promise.resolve(orientation.lock("landscape"))
+                .then(function () { return true; })
+                .catch(function () { return false; });
+            } catch (error) {
+              return false;
+            }
+          });
+        }
+
+        action.addEventListener("click", function () {
+          if (attemptPending) return;
+          attemptPending = true;
+          attemptFailed = false;
+          refreshOrientationGate();
+          requestLandscapeMode().then(function (locked) {
+            attemptPending = false;
+            attemptFailed = !locked && isPortraitViewport();
+            refreshOrientationGate();
+          }).catch(function () {
+            attemptPending = false;
+            attemptFailed = true;
+            refreshOrientationGate();
+          });
+        });
+        gate.addEventListener("keydown", function (event) {
+          if (event.key !== "Tab") return;
+          event.preventDefault();
+          action.focus({ preventScroll: true });
+        });
+
+        function scheduleOrientationRefresh() {
+          refreshOrientationGate();
+          window.clearTimeout(refreshTimerShort);
+          window.clearTimeout(refreshTimerLong);
+          refreshTimerShort = window.setTimeout(refreshOrientationGate, 120);
+          refreshTimerLong = window.setTimeout(refreshOrientationGate, 350);
+        }
+
+        window.addEventListener("resize", scheduleOrientationRefresh);
+        window.addEventListener("orientationchange", scheduleOrientationRefresh);
+        document.addEventListener("fullscreenchange", scheduleOrientationRefresh);
+        document.addEventListener("webkitfullscreenchange", scheduleOrientationRefresh);
+        if (window.screen && window.screen.orientation && window.screen.orientation.addEventListener) {
+          window.screen.orientation.addEventListener("change", scheduleOrientationRefresh);
+        }
+        if (window.visualViewport && window.visualViewport.addEventListener) {
+          window.visualViewport.addEventListener("resize", scheduleOrientationRefresh);
+        }
+        refreshOrientationGate();
       }());
     </script>
   </body>
