@@ -1,5 +1,5 @@
 균열을 막아라 : 우주전쟁 - WebGL Submission Build
-Built UTC: 2026-08-14T19:41:06.7956544Z
+Built UTC: 2026-08-20T02:44:49.4564813Z
 Unity: 6000.3.12f1
 Product: 균열을 막아라 : 우주전쟁
 Version: 1.0.5
@@ -13,13 +13,13 @@ Textures: 100 curated files / 100 importer updates / 60,285,592 -> 46,073,856 im
 Search indexing: disabled (noindex, nofollow, noarchive)
 Mobile orientation: landscape fullscreen request with manual-rotate fallback
 Build result: Succeeded
-Build duration: 00:27:01.9126646
-Build report bytes: 45816599
+Build duration: 00:21:39.3523507
+Build report bytes: 45893427
 Player output files: 27
-Player output bytes: 45847605
+Player output bytes: 45924433
 Warnings: 0
 Errors: 0
-Resources: 156 files / 55.18 MiB; development-looking files: 0 / 0.00 MiB.
+Resources: 159 files / 55.82 MiB; development-looking files: 0 / 0.00 MiB.
 ZIP file: SealTheRift-WebGL.zip
 Enabled scenes:
 - Assets/01_Scenes/Home.unity
