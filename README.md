@@ -10,6 +10,8 @@
 - 나혼자 학교에 잠들었다 - 2P GAME ARCADE 1.44MB 게임개발 공모전 IndieGame.com 특별상 (2026.10.19)
 - MonBreak - AI 협업 개발, Google Play 출시
 - 까치툴 - 문서·이미지·앱 개발 도구, Cloudflare 배포·운영
+- UFO 대 로봇 - Roblox 비대칭 팀 대전, AI 봇·성장·운영 시스템
+- 정말 삭제하시겠습니까? - Roblox 1~4인 협동 공포, 파일 복원·엔딩 분기
 - 뉴베이스 - 의료 VR 클라이언트 개발, AI 환자 NPC R&D 시제품
 
 ## 사이트 구성
