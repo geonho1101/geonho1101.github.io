@@ -75,3 +75,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid #b5752d;outline-offset:6
   .section-head .label{margin-bottom:18px}
 }
 @media(max-width:420px){.topbar nav a:nth-child(2){display:block}.topbar nav{gap:10px}}
+
+.night-school-award{scroll-margin-top:90px}
+.night-school-award>a{align-self:start}
+.night-school-award img{height:auto;aspect-ratio:1;object-fit:contain}

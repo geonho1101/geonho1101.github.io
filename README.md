@@ -7,6 +7,7 @@
 ## 대표 사례
 
 - 가짜게임개발자: AI 인간 개발 전쟁 우수상(1위) - 5시간 30분 개인 제작
+- 나혼자 학교에 잠들었다 - 2P GAME ARCADE 1.44MB 게임개발 공모전 IndieGame.com 특별상 (2026.10.19)
 - MonBreak - AI 협업 개발, Google Play 출시
 - 까치툴 - 문서·이미지·앱 개발 도구, Cloudflare 배포·운영
 - 뉴베이스 - 의료 VR 클라이언트 개발, AI 환자 NPC R&D 시제품
